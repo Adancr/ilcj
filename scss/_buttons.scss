@@ -1,0 +1,112 @@
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: $color-white;
+  background-color: $color-secondary !important;
+  border-color: $color-secondary;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  border-color: $color-secondary;
+}
+
+* {
+  text-decoration: none;
+}
+.btn-primary:hover {
+  color: $color-black;
+  background-color: $color-white;
+  border-color: $color-secondary;
+  font-weight: 500;
+}
+
+.btn-primary:active {
+  color: $color-black;
+  background-color: $color-secondary;
+  border-color: $color-secondary;
+  font-weight: 500;
+  color: $color-primary;
+  border: none;
+}
+
+.btn-primary:focus {
+  background-color: $color-secondary;
+  box-shadow: 0 0 0 0.2rem rgba(153, 25, 2, 0.548);
+}
+
+.btn-primary:after {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 600;
+  content: "\f054";
+  position: relative;
+  left: 3px;
+  top: 0.1rem;
+  transition: left 0.3s ease;
+  font-size: 2rem;
+}
+
+.btn-primary:hover:after,
+.btn-primary:active:after,
+.btn-primary:focus:after {
+  left: 0.3rem;
+}
+
+/* Insertar caja blanaca del boton principal */
+
+.btn-primary:before {
+  content: "";
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background: $color-white;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: skew(45deg, 0);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover:before {
+  width: 130%;
+  left: -20px;
+}
+
+/*button call*/
+.call {
+  display: none;
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  background-color: $color-primary;
+  color: $color-white;
+  border-radius: 15px;
+  .fas {
+    font-size: 3.5rem;
+    padding: 0.8rem 1rem;
+  }
+  @media (max-width: 768px) {
+    display: inline-block;
+  }
+}
+
+.btn-callme {
+  border: $color-white;
+  background-color: $color-red;
+  padding: 1rem 1.6rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  display: inline-block;
+  span {
+    color: $color-white;
+    font-weight: bold;
+    font-size: 2rem;
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+  }
+}
