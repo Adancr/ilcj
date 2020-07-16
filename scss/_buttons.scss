@@ -12,7 +12,9 @@
   position: relative;
   overflow: hidden;
   z-index: 0;
+  border: none !important;
   border-color: $color-secondary;
+  font-family: "Nunito", sans-serif !important;
 }
 
 * {

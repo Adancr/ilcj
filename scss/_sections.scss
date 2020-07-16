@@ -1,0 +1,57 @@
+// Benefcios
+.beneficios {
+  &--title {
+    .title {
+      font-size: 3.2rem;
+      font-weight: 800;
+    }
+  }
+  &--items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 35px;
+  }
+  &--item {
+    &_text {
+      p:first-child {
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+      p:nth-child(2) {
+        font-size: 1.6rem;
+      }
+      p:nth-child(3) {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Diplomados
+.cursos {
+  .container-fluid {
+    max-width: 1400px;
+  }
+  &--title {
+    margin: 40px 0 20px 0;
+  }
+  .title {
+    font-size: 3.2rem;
+    font-weight: 800;
+  }
+  .coinaner-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+  }
+  .curso {
+    &--item {
+      &_img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
